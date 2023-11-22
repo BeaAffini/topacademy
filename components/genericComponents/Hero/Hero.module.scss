@@ -3,11 +3,11 @@
 
 
 .hero {
-  background-color: $color-blue-very-light;
+  background-color: $color-green-very-light;
   
   &--transparent {
     @extend .hero;
-    background-color: transparent;
+    background-color: transparent; 
   }
 
   &--white {
