@@ -16,14 +16,7 @@
   }
 }
 
-.eventdate {
-  background-color: $color-green-light;
-  font-size: 16x;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-right: 20px;
-  @include small-text-font($color-red-normal);
-}
+
 
 @media only screen and (min-width: 500px) {
   .event-page {}

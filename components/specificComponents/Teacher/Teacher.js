@@ -36,7 +36,6 @@ export default class Teacher extends Component {
 							</section>
 						</div>
 					</div>
-
 				</main>
 			</div>
 		);

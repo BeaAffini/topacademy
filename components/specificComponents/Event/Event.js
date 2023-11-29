@@ -54,7 +54,6 @@ export default class Event extends Component {
 					{this.props.blok.images && this.props.blok.images.map((nestedBlok) => (
 						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
 					))}
-					
 				</main>
 			</div>
 		);
