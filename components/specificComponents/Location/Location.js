@@ -41,11 +41,11 @@ export default class Location extends Component {
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
 							</section>
 						</div>
-						<div id="location__short-description" key="location__short-description" className={css["location__short-description"]}>
-							<section className={css["rich-text-section--with-navigator"]}>
-								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.image })}</div>
-							</section>
-						</div>
+					</div>
+					<div id="location__short-description" key="location__short-description" className={css["location__short-description"]}>
+						<section className={css["rich-text-section--with-navigator"]}>
+							<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.image })}</div>
+						</section>
 					</div>
 
 					{this.props.blok.images && this.props.blok.images.map((nestedBlok) => (
