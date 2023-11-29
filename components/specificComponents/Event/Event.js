@@ -45,8 +45,12 @@ export default class Event extends Component {
 								<span className={css["eventdate"]}>{this.props.blok.startdate} - {this.props.blok.enddate}</span>
 							</section>
 							<section className={css["rich-text-section--with-navigator"]}>
+								<h2 className={css["rich-text-section__title"]}>Location</h2>
+								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
+							</section>
+							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Tickets</h2>
-								<div className={css["eventdate"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
+								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
 							</section>
 						</div>
 					</div>

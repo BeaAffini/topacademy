@@ -1,6 +1,14 @@
 @import "../../../styles/font-mixins.scss";
 @import "../../../styles/colors.scss";
 
+.eventdate {
+  background-color: $color-green-light;
+  font-size: 16x;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  @include small-text-font($color-red-normal);
+}
 
 .event-page {
 
@@ -31,7 +39,6 @@
       grid-template-columns: auto 552px auto;
       max-width: none;
     }
-
 
     &__short-description, &__description {
       grid-column: 2 / 3;
