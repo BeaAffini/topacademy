@@ -46,11 +46,14 @@ export default class Event extends Component {
 							</section>
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Location</h2>
-								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
+								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.Location })}</div>
 							</section>
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Tickets</h2>
 								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
+							</section>
+							<section className={css["rich-text-section--with-navigator"]}>
+								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.Image })}</div>
 							</section>
 						</div>
 					</div>
