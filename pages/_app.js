@@ -47,7 +47,7 @@ const components = {
   imagecarousel: ImageCarousel,
   location: Location,
   product: Product,
-  event:Event,
+  event: Event,
 };
 
 storyblokInit({

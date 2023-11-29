@@ -2,7 +2,7 @@
 @import "../../../styles/colors.scss";
 
 
-.event {
+.event-page {
 
   &__main-content {
     display: grid;
@@ -16,16 +16,23 @@
   }
 }
 
-
+.eventdate {
+  background-color: $color-green-light;
+  font-size: 16x;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  @include small-text-font($color-red-normal);
+}
 
 @media only screen and (min-width: 500px) {
-  .event {}
+  .event-page {}
 }
 
 
 
 @media only screen and (min-width: 850px) {
-  .event {
+  .event-page {
 
     &__main-content {
       grid-template-columns: auto 552px auto;
@@ -42,7 +49,7 @@
 
 
 @media only screen and (min-width: 1250px) {
-  .event {
+  .event-page {
 
     &__main-content {
       grid-template-columns: auto 729px auto;
@@ -57,7 +64,7 @@
 
 
 @media only screen and (min-width: 1400px) {
-  .event {
+  .event-page {
 
     &__main-content {
       grid-template-columns: auto 835px auto;
@@ -68,7 +75,7 @@
 
 
 @media only screen and (min-width: 1600px) {
-  .event {
+  .event-page {
 
     &__main-content {
       grid-template-columns: auto 920px auto;

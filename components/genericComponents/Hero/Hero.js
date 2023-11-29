@@ -22,7 +22,7 @@ export default function Hero({ blok }) {
 					<div className={[css["hero__title-group"], css["hero__title-group"]].join(" ")}>
 						<p className={css["hero__tag"]}>{blok.supertitle}</p>
 						<h1 className={css["hero__title"]}>{titleString || RichTextToHTML({ document: blok.title, textClassName: css["hero__title"], boldClassName: css["hero__title--highlighted" + colorCssName] })}</h1>
-						<div className={css["hero__subtitle"]}>test{taglineString || RichTextToHTML({ document: blok.Tagline, textClassName: css["hero__subtitle"] })}</div>
+						<div className={css["hero__subtitle"]}>{taglineString || RichTextToHTML({ document: blok.Tagline, textClassName: css["hero__subtitle"] })}</div>
 						{blok.tags && blok.tags.length > 0 && <TagList tags={blok.tags} variation={"white"} center />}
 					</div>
 					{showImage &&
