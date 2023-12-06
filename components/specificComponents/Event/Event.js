@@ -40,20 +40,28 @@ export default class Event extends Component {
 								<h2 className={css["rich-text-section__title"]}>What to expect</h2>
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
 							</section>
+						</div>
+						<div id="event__short-description" key="event__short-description" className={css["event__short-description"]}>
+							<section className={css["rich-text-section--with-navigator"]}>
+								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.image })}</div>
+							</section>
+						</div>
+						<div id="event__short-description" key="event__short-description" className={css["event__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>When</h2>
 								<span className={css["eventdate"]}>{this.props.blok.startdate} - {this.props.blok.enddate}</span>
 							</section>
+						</div>
+						<div id="event__short-description" key="event__short-description" className={css["event__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Location</h2>
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.Location })}</div>
 							</section>
+						</div>
+						<div id="event__short-description" key="event__short-description" className={css["event__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Tickets</h2>
 								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
-							</section>
-							<section className={css["rich-text-section--with-navigator"]}>
-								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.Image })}</div>
 							</section>
 						</div>
 					</div>
