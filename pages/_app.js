@@ -28,8 +28,8 @@ import Product from '../components/specificComponents/Product/Product';
 import Event from '../components/specificComponents/Event/Event';
 
 
-const components = {
-  person: Teacher,
+const components = { //this is a mapping 
+  person: Teacher, //with the lower case is the component we receive from storyblok, with the uppercase it's the code page: so everytime you receive the component from storyblok it runs the code in the correspondant code
   experience: Experience,
   hero: Hero,
   page: Page,
@@ -81,3 +81,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+/*very important file, it is run everytime the application is run*/

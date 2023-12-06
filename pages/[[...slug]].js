@@ -108,3 +108,13 @@ export async function getStaticPaths() {
     fallback: 'blocking'
   };
 }
+
+/* this file will load for everything is being ask from the website. 
+Everytime we'll have the Headcomponent and the storyblock component (lines 23-24)
+The storyblok component detect which type of content it is receiving from Storyblok and will 
+upload the corresponding page*/
+
+/*If you want to put something that is not in storyblok you can add it in the public folder
+!!logo*/
+
+/*styles defines the colors ecc of the site*/
