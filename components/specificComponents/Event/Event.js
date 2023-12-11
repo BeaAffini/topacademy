@@ -60,6 +60,14 @@ export default class Event extends Component {
 					{this.props.blok.bottombloks && this.props.blok.bottombloks.map((nestedBlok) => (
 						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
 					))}
+					<div id="event__short-description" key="event__short-description" className={css["course-page__short-description"]}>
+						<section className={css["rich-text-section--with-navigator"]}>
+							<h2 className={css["rich-text-section__title"]}>Musicians Playing</h2>
+							{this.props.blok.teachers && this.props.blok.teachers.map((teacher) => (
+								<TeacherCard blok={teacher} key={teacher._uid} />
+							))}
+						</section>
+					</div>
 				</main>
 			</div>
 		);
