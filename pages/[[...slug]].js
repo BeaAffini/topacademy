@@ -44,7 +44,7 @@ export async function getStaticProps({ params }) {
       "course.locations",
       "course.products",
       "list.elements",
-      "event.teachers",
+      "event.teachers"
     ]
   };
 

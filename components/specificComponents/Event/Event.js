@@ -38,7 +38,7 @@ export default class Event extends Component {
 								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
 							</section> 
 							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}>Artist Playing</h2>
+								<h2 className={css["rich-text-section__title"]}>Artists Playing</h2>
 								{this.props.blok.teachers && this.props.blok.teachers.map((teacher) => (
 									<TeacherCard blok={teacher} key={teacher._uid} />
 								))}
