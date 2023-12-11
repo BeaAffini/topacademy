@@ -35,7 +35,7 @@ export default class Event extends Component {
 			<div {...storyblokEditable(this.props.blok)}>
 				<Headermenu blok={this.props.menu.content}></Headermenu>
 				<main>
-					<Hero blok={this.props.blok} contentTypeTag="course" />
+					<Hero blok={this.props.blok} contentTypeTag="event" />
 					<div className={css["event-page__main-content"]}>
 						<div id="event-page__short-description" key="event-page__short-description" className={css["event-page__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
@@ -54,8 +54,10 @@ export default class Event extends Component {
 								<h2 className={css["rich-text-section__title"]}>Tickets</h2>
 								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
 							</section>
+						</div>
+						<div id="event-page__short-description" key="event-page__short-description" className={css["event-page__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}>Artists Playing</h2>
+								<h2 className={css["rich-text-section__title"]}> Artists Playing </h2>
 								{this.props.blok.teachers && this.props.blok.teachers.map((teacher) => (
 									<TeacherCard blok={teacher} key={teacher._uid} />
 								))}
@@ -63,12 +65,24 @@ export default class Event extends Component {
 						</div>
 					</div>
 
-					{this.props.blok.bottombloks && this.props.blok.bottombloks.map((nestedBlok) => (
-						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-					))}
+					
 				</main>
 			</div>
 		);
 
 	}
 }
+
+/*{this.props.blok.bottombloks && this.props.blok.bottombloks.map((nestedBlok) => (
+						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+					))}*/
+/*
+
+
+					
+				</main>
+			</div>
+		);
+
+	}
+}*/
