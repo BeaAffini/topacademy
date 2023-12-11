@@ -1,20 +1,3 @@
-// import React, { Component } from "react";
-
-// export default class Event extends Component {
-
-//     constructor(props) {
-//         super(props);
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 Event:{this.props.blok.title}</div>
-//         );
-
-//     }
-// }
-
 import React, { Component } from "react";
 import css from "./Event.module.scss";
 import Headermenu from "../../genericComponents/Headermenu/Headermenu";
@@ -38,7 +21,7 @@ export default class Event extends Component {
 					<Hero blok={this.props.blok} contentTypeTag="event" />
 					<div className={css["event-page__main-content"]}>
 						<div id="event-page__short-description" key="event-page__short-description" className={css["event-page__short-description"]}>
-							<section className={css["rich-text-section--with-navigator"]}>
+						<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>What to expect</h2>
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
 							</section>
@@ -53,36 +36,21 @@ export default class Event extends Component {
 							<section className={css["rich-text-section--with-navigator"]}>
 								<h2 className={css["rich-text-section__title"]}>Tickets</h2>
 								<div className={css["rich-text-eventdate-text"]}>{RichTextToHTML({ document: this.props.blok.tickets })}</div>
-							</section>
-						</div>
-						<div id="event-page__short-description" key="event-page__short-description" className={css["event-page__short-description"]}>
+							</section> 
 							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}> Artists Playing </h2>
+								<h2 className={css["rich-text-section__title"]}>Artist Playing</h2>
 								{this.props.blok.teachers && this.props.blok.teachers.map((teacher) => (
 									<TeacherCard blok={teacher} key={teacher._uid} />
 								))}
 							</section>
 						</div>
 					</div>
-
-					
+					{this.props.blok.bottombloks && this.props.blok.bottombloks.map((nestedBlok) => (
+						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+					))}
 				</main>
 			</div>
 		);
 
 	}
 }
-
-/*{this.props.blok.bottombloks && this.props.blok.bottombloks.map((nestedBlok) => (
-						<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-					))}*/
-/*
-
-
-					
-				</main>
-			</div>
-		);
-
-	}
-}*/
